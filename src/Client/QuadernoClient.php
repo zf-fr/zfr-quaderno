@@ -79,12 +79,12 @@ class QuadernoClient extends GuzzleClient
 
         if ($this->sandbox) {
             $baseUrl = sprintf(
-                'https://%s.sandbox-quadernoapp.com',
+                'http://%s.sandbox-quadernoapp.com/api/v1',
                 $this->accountName
             );
         } else {
             $baseUrl = sprintf(
-                'https://%s.quadernoapp.com',
+                'https://%s.quadernoapp.com/api/v1',
                 $this->accountName
             );
         }
