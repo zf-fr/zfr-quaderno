@@ -7,7 +7,7 @@ ZfrQuaderno is a modern PHP library based on Guzzle for [Quaderno invoicing syst
 
 ## Dependencies
 
-* PHP 5.4+
+* PHP 5.5+
 * [Guzzle](http://www.guzzlephp.org): >= 5.0
 
 If you are using ZF2, you can use the module that simplify its usage: [ZfrQuadernoModule](https://github.com/zf-fr/zfr-quaderno-module)
