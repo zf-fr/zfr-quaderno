@@ -31,14 +31,14 @@ return [
 
         'getContacts' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'contacts.json',
+            'uri'              => '/api/v1/contacts.json',
             'summary'          => 'Get details about the contacts',
             'responseModel'    => 'getResponse'
         ],
 
         'getContact' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'contacts/{id}.json',
+            'uri'              => '/api/v1/contacts/{id}.json',
             'summary'          => 'Get details about a single contact',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -61,7 +61,7 @@ return [
 
         'getInvoices' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'invoices.json',
+            'uri'              => '/api/v1/invoices.json',
             'summary'          => 'Get details about all the invoices',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -88,7 +88,7 @@ return [
 
         'getInvoice' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'invoices/{id}.json',
+            'uri'              => '/api/v1/invoices/{id}.json',
             'summary'          => 'Get details about a single invoice',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -103,7 +103,7 @@ return [
 
         'deliverInvoice' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'invoices/{id}/deliver.json',
+            'uri'              => '/api/v1/invoices/{id}/deliver.json',
             'summary'          => 'Deliver a s',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -126,14 +126,14 @@ return [
 
         'getWebhooks' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'webhooks.json',
+            'uri'              => '/api/v1/webhooks.json',
             'summary'          => 'Get details about registered webhooks',
             'responseModel'    => 'getResponse'
         ],
 
         'getWebhook' => [
             'httpMethod'       => 'GET',
-            'uri'              => 'webhooks/{id}.json',
+            'uri'              => '/api/v1/webhooks/{id}.json',
             'summary'          => 'Get details about a single registrered webhook',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -148,19 +148,19 @@ return [
 
         'createWebhook' => [
             'httpMethod'       => 'POST',
-            'uri'              => 'webhooks.json',
+            'uri'              => '/api/v1/webhooks.json',
             'summary'          => 'Create a new webhook',
             'responseModel'    => 'getResponse',
             'parameters'       => [
                 'url' => [
                     'description' => 'URL where webhooks are sent',
-                    'location'    => 'query',
+                    'location'    => 'json',
                     'type'        => 'string',
                     'required'    => true
                 ],
-                'event_types' => [
-                    'description' => 'Event to listen to',
-                    'location'    => 'query',
+                'events_types' => [
+                    'description' => 'Events to listen to',
+                    'location'    => 'json',
                     'type'        => 'array',
                     'required'    => true,
                     'items'       => [
@@ -177,7 +177,7 @@ return [
 
         'updateWebhook' => [
             'httpMethod'       => 'PUT',
-            'uri'              => 'webhooks/{id}.json',
+            'uri'              => '/api/v1/webhooks/{id}.json',
             'summary'          => 'Update an existing webhook',
             'responseModel'    => 'getResponse',
             'parameters'       => [
@@ -188,9 +188,9 @@ return [
                     'required'    => true
                 ],
 
-                'event_types' => [
+                'events_types' => [
                     'description' => 'Event to listen to',
-                    'location'    => 'query',
+                    'location'    => 'json',
                     'type'        => 'array',
                     'required'    => true,
                     'items'       => [
@@ -207,7 +207,7 @@ return [
 
         'deleteWebhook' => [
             'httpMethod'       => 'DELETE',
-            'uri'              => 'webhooks/{id}.json',
+            'uri'              => '/api/v1/webhooks/{id}.json',
             'summary'          => 'Delete an existing webhook',
             'responseModel'    => 'getResponse',
             'parameters'       => [
