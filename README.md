@@ -1,7 +1,7 @@
 ZfrQuaderno
 ===========
 
-[![Latest Stable Version](https://poser.pugx.org/zfr/zfr-stripe/v/stable.png)](https://packagist.org/packages/zfr/zfr-stripe)
+[![Latest Stable Version](https://poser.pugx.org/zfr/zfr-quaderno/v/stable.png)](https://packagist.org/packages/zfr/zfr-quaderno)
 
 ZfrQuaderno is a modern PHP library based on Guzzle for [Quaderno invoicing system](https://quadernoapp.com).
 
