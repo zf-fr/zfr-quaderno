@@ -104,7 +104,7 @@ return [
         'deliverInvoice' => [
             'httpMethod'       => 'GET',
             'uri'              => '/api/v1/invoices/{id}/deliver.json',
-            'summary'          => 'Deliver a s',
+            'summary'          => 'Deliver an invoice',
             'responseModel'    => 'getResponse',
             'parameters'       => [
                 'id' => [

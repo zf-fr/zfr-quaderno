@@ -22,6 +22,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Command\Event\PreparedEvent;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
+use GuzzleHttp\Message\Request;
 
 /**
  * @author  Michaël Gallego <mic.gallego@gmail.com>
@@ -36,6 +37,7 @@ use GuzzleHttp\Command\Guzzle\GuzzleClient;
  *
  * @method array getInvoices(array $args = array()) {@command Quaderno getInvoices}
  * @method array getInvoice(array $args = array()) {@command Quaderno getInvoice}
+ * @method array deliverInvoice(array $args = array()) {@command Quaderno deliverInvoice}
  *
  * WEBHOOKS RELATED METHODS:
  *
@@ -61,6 +63,11 @@ class QuadernoClient extends GuzzleClient
      * @var bool
      */
     private $sandbox;
+
+    /**
+     * @var string|null
+     */
+    private $webhookAuthenticationKey;
 
     /**
      * Constructor
@@ -96,6 +103,17 @@ class QuadernoClient extends GuzzleClient
     }
 
     /**
+     * Set the webhook authentication key (used to validate incoming webhooks)
+     *
+     * @param  string $webhookAuthenticationKey
+     * @return void
+     */
+    public function setWebhookAuthenticationKey($webhookAuthenticationKey)
+    {
+        $this->webhookAuthenticationKey = (string) $webhookAuthenticationKey;
+    }
+
+    /**
      * Get current Stripe API version
      *
      * @return string
@@ -113,6 +131,23 @@ class QuadernoClient extends GuzzleClient
     public function isSandbox()
     {
         return $this->sandbox;
+    }
+
+    /**
+     * Validate a webhook request using the webhook authentication key
+     *
+     * @param  Request $request
+     * @return bool
+     */
+    public function validateWebhookRequest(Request $request)
+    {
+        $signature = $request->getHeader('X-Quaderno-Signature');
+
+        if (empty($signature) || null === $this->webhookAuthenticationKey) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

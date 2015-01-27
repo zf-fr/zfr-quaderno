@@ -48,6 +48,7 @@ INVOICE RELATED METHODS:
 
 * array getInvoices(array $args = array())
 * array getInvoice(array $args = array())
+* array deliverInvoice(array $args = array())
 
 WEBHOOK RELATED METHODS:
 
