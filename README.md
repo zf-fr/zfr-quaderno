@@ -57,3 +57,7 @@ WEBHOOK RELATED METHODS:
 * array createWebhook(array $args = array())
 * array updateWebhook(array $args = array())
 * array deleteWebhook(array $args = array())
+
+TAXES RELATED METHODS:
+
+* array calculateTaxes(array $args = array())

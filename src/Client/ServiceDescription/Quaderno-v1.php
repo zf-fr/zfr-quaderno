@@ -33,7 +33,15 @@ return [
             'httpMethod'       => 'GET',
             'uri'              => '/api/v1/contacts.json',
             'summary'          => 'Get details about the contacts',
-            'responseModel'    => 'getResponse'
+            'responseModel'    => 'getResponse',
+            'parameters'       => [
+                'page' => [
+                    'description' => 'Page number',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
+                ]
+            ]
         ],
 
         'getContact' => [
@@ -79,6 +87,12 @@ return [
                 ],
                 'state' => [
                     'description' => 'Filter by state',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'page' => [
+                    'description' => 'Page number',
                     'location'    => 'query',
                     'type'        => 'string',
                     'required'    => false
@@ -128,7 +142,15 @@ return [
             'httpMethod'       => 'GET',
             'uri'              => '/api/v1/webhooks.json',
             'summary'          => 'Get details about registered webhooks',
-            'responseModel'    => 'getResponse'
+            'responseModel'    => 'getResponse',
+            'parameters'       => [
+                'page' => [
+                    'description' => 'Page number',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
+                ]
+            ]
         ],
 
         'getWebhook' => [
@@ -216,6 +238,43 @@ return [
                     'location'    => 'uri',
                     'type'        => 'string',
                     'required'    => true
+                ]
+            ]
+        ],
+
+        /**
+         * --------------------------------------------------------------------------------
+         * TAXES RELATED METHODS
+         *
+         * DOC: https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md
+         * --------------------------------------------------------------------------------
+         */
+
+        'calculateTaxes' => [
+            'httpMethod'       => 'GET',
+            'uri'              => '/api/v1/taxes/calculate.json',
+            'summary'          => 'Calculate taxes for a given customer data',
+            'responseModel'    => 'getResponse',
+            'parameters'       => [
+                'country' => [
+                    'description' => 'The customer\'s two-letters country code',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+
+                'postal_code' => [
+                    'description' => 'The customer\'s postal code',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+
+                'vat_number' => [
+                    'description' => 'The customer\'s VAT number',
+                    'location'    => 'query',
+                    'type'        => 'string',
+                    'required'    => false
                 ]
             ]
         ]

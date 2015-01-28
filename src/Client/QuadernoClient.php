@@ -45,6 +45,10 @@ use GuzzleHttp\Command\Guzzle\GuzzleClient;
  * @method array createWebhook(array $args = array()) {@command Quaderno createWebhook}
  * @method array updateWebhook(array $args = array()) {@command Quaderno updateWebhook}
  * @method array deleteWebhook(array $args = array()) {@command Quaderno deleteWebhook}
+ *
+ * TAXES RELATED METHODS:
+ *
+ * @method array calculateTaxes(array $args = array()) {@command Quaderno calculateTaxes}
  */
 class QuadernoClient extends GuzzleClient
 {
