@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Add the `updateContact` method
+
 # 1.0.2
 
 * Add the `getStripeContact` method

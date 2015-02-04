@@ -44,6 +44,7 @@ CONTACT RELATED METHODS:
 * array getContacts(array $args = array())
 * array getContact(array $args = array())
 * array getStripeContact(array $args = array())
+* array updateContact(array $args = array())
 
 INVOICE RELATED METHODS:
 

@@ -74,6 +74,117 @@ return [
             ]
         ],
 
+        'updateClient' => [
+            'httpMethod'       => 'PUT',
+            'uri'              => '/api/v1/contacts/{id}.json',
+            'summary'          => 'Update details of an existing contact',
+            'responseModel'    => 'getResponse',
+            'parameters'       => [
+                'id' => [
+                    'description' => 'Unique identifier of the contact',
+                    'location'    => 'uri',
+                    'type'        => 'string',
+                    'required'    => true
+                ],
+                'first_name' => [
+                    'description' => 'First name of the contact (not if company)',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'last_name' => [
+                    'description' => 'Last name of the contact (not if company)',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'contact_name' => [
+                    'description' => 'Contact name (full name)',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'street_line_1' => [
+                    'description' => 'Street line 1',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => true
+                ],
+                'street_line_2' => [
+                    'description' => 'Street line 2',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'city' => [
+                    'description' => 'City of the contact',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => true
+                ],
+                'postal_code' => [
+                    'description' => 'Postal code of the contact',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => true
+                ],
+                'region' => [
+                    'description' => 'Region of the contact',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'country' => [
+                    'description' => 'Country code of the country',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'tax_id' => [
+                    'description' => 'Tax ID',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'vat_number' => [
+                    'description' => 'VAT number',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'phone_1' => [
+                    'description' => 'First phone number',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'phone_2' => [
+                    'description' => 'Second phone number',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'fax' => [
+                    'description' => 'Fax number',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'email' => [
+                    'description' => 'Email address of the contact',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ],
+                'language' => [
+                    'description' => 'Language of the user',
+                    'location'    => 'json',
+                    'type'        => 'string',
+                    'required'    => false
+                ]
+            ]
+        ],
+
         /**
          * --------------------------------------------------------------------------------
          * INVOICE RELATED METHODS
