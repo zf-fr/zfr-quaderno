@@ -31,6 +31,7 @@ use GuzzleHttp\Command\Guzzle\GuzzleClient;
  *
  * @method array getContacts(array $args = array()) {@command Quaderno getContacts}
  * @method array getContact(array $args = array()) {@command Quaderno getContact}
+ * @method array getStripeContact(array $args = array()) {@command Quaderno getStripeContact}
  *
  * INVOICE RELATED METHODS:
  *

@@ -59,6 +59,21 @@ return [
             ]
         ],
 
+        'getStripeContact' => [
+            'httpMethod'       => 'GET',
+            'uri'              => '/api/v1/stripe/customers/{id}.json',
+            'summary'          => 'Get details about a single contact from its Stripe ID',
+            'responseModel'    => 'getResponse',
+            'parameters'       => [
+                'id' => [
+                    'description' => 'Stripe customer ID',
+                    'location'    => 'uri',
+                    'type'        => 'string',
+                    'required'    => true
+                ]
+            ]
+        ],
+
         /**
          * --------------------------------------------------------------------------------
          * INVOICE RELATED METHODS
