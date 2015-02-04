@@ -74,7 +74,7 @@ return [
             ]
         ],
 
-        'updateClient' => [
+        'updateContact' => [
             'httpMethod'       => 'PUT',
             'uri'              => '/api/v1/contacts/{id}.json',
             'summary'          => 'Update details of an existing contact',
