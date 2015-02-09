@@ -1,3 +1,7 @@
+# 1.0.4
+
+* Add support for the new `payment.created` webhook
+
 # 1.0.3
 
 * Add the `updateContact` method

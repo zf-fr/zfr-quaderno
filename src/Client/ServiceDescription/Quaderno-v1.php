@@ -316,7 +316,8 @@ return [
                         'enum' => [
                             'invoice.created', 'invoice.updated', 'invoice.deleted',
                             'expense.created', 'expense.updated', 'expense.deleted',
-                            'estimate.created', 'estimate.updated', 'estimate.deleted'
+                            'estimate.created', 'estimate.updated', 'estimate.deleted',
+                            'payment.created'
                         ]
                     ]
                 ]
@@ -346,7 +347,8 @@ return [
                         'enum' => [
                             'invoice.created', 'invoice.updated', 'invoice.deleted',
                             'expense.created', 'expense.updated', 'expense.deleted',
-                            'estimate.created', 'estimate.updated', 'estimate.deleted'
+                            'estimate.created', 'estimate.updated', 'estimate.deleted',
+                            'payment.created'
                         ]
                     ]
                 ]
